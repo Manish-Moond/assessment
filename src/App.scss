@@ -1,0 +1,275 @@
+.header-container {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .logo-left {
+    width: auto;
+    height: 80px;
+
+    @media (max-width: 768px) {
+      height: 60px;
+    }
+  }
+
+  .header-text {
+    color: #343333;
+    font-size: 36px;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      display: block;
+      font-size: 24px;
+    }
+  }
+
+  .logo-right {
+    width: auto;
+    height: 80px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    margin: 12px;
+    display: flex;
+    background-color: white;
+    height: 570px;
+    max-width: 1100px;
+    // min-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      display: block;
+      height: auto;
+      width: auto;
+    }
+
+    .custom-video-container {
+      flex: 1;
+
+      .video {
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .custom-controls {
+        position: relative;
+
+        .play-btn {
+          position: absolute;
+          z-index: 1;
+          top: -120px;
+          left: 33%;
+          border-radius: 50px;
+          padding: 12px;
+          border: none;
+          background: rgba(0, 0, 0, 0.6);
+          font-size: 20px;
+          cursor: pointer;
+          color: white;
+
+          .btn {
+            padding-right: 12px;
+            color: rgb(110, 12, 249);
+          }
+        }
+
+        .progress-bar {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          z-index: 2;
+          top: -40px;
+          left: 12%;
+          width: 80%;
+          height: 5px;
+          background-color: #ddd;
+
+          .pause-btn {
+            border: none;
+            position: absolute;
+            left: -6%;
+            background: transparent;
+            font-size: 24px;
+            color: #00CDA7;
+          }
+
+          .progress {
+            height: 100%;
+            background-color: #00CDA7;
+          }
+        }
+
+        .play-pause-btn:hover {
+          .btn {
+            color: #00CDA7;
+          }
+        }
+      }
+    }
+
+    .intro {
+      margin-left: 32px;
+      margin-top: 24px;
+      flex: 1;
+      color: #343333;
+
+      .text-purple {
+        color: rgb(110, 12, 249);
+      }
+
+      .intro-points-list {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 200;
+
+        @media screen and (max-width: 1000px) {
+          font-size: 18px;
+        }
+      }
+
+      .completion {
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+
+        .get-started {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 18px;
+          padding-right: 18px;
+          font-size: 24px;
+          background-color: rgb(110, 12, 249);
+          color: white;
+          border: none;
+          border-radius: 4px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+
+        .get-started:hover {
+          background-color: #00CDA7;
+        }
+
+        .time-estimate {
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+
+  .assessment-card {
+    margin-top: 12px;
+    padding-left: 56px;
+    padding-right: 56px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 900px;
+    width: 1000px;
+    height: 570px;
+    text-align: center;
+
+  }
+
+  .progress-bars {
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+
+    .percentage-label {
+      position: absolute;
+      top: -20%;
+      transform: translate(-50%, -50%);
+      color: rgb(110, 12, 249);
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      margin-top: 12px;
+      display: flex;
+      width: 180px;
+      height: 6px;
+      background-color: #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      .progress {
+        height: 100%;
+        background-color: rgb(110, 12, 249);
+        transition: width 0.3s ease;
+      }
+    }
+
+    @media (max-width: 768px) {
+          .progress-bar2, .progress-bar3, .progress-bar4{
+            display: none;
+          }
+    }
+  }
+
+  .question {
+    padding-top: 24px;
+
+    .question-text {
+      color: #343333;
+      margin-top: 24px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+  .slider {
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .breakPoint-selected {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: gray;
+    cursor: pointer;
+  }
+  .breakPoint-unselected {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(110, 12, 249);
+    cursor: pointer;
+  }
+
+  .prev-next-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+
+    .pnbtn {
+      border: none;
+      font-size: 16px;
+      color: #343333;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+}
