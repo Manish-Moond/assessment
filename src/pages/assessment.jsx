@@ -155,7 +155,7 @@ const Assessment = () => {
                 style={{
                   position: "absolute",
                   border: "5px solid rgb(110, 12, 249)",
-                  width: `${selectedBreakpoint * 24}%`,
+                  width: `${selectedBreakpoint * 24.6}%`,
                   transformOrigin: "top",
                   transition: "width 0.3s ease",
                   borderRadius: "5px",
