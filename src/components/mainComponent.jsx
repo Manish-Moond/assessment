@@ -96,7 +96,7 @@ export default function MainComponent() {
             *Artificial Intelligence
           </h5>
           <p
-            style={{ fontSize: "12px", paddingTop: "8px", paddingRight: "4px" }}
+            style={{ fontSize: "12px", paddingTop: "8px", paddingRight: "4px", paddingBottom: "16px" }}
           >
             <span style={{ fontWeight: "600" }}>
               {" "}

@@ -7,6 +7,7 @@ const Assessment = () => {
   const [selectedBreakpoint, setSelectedBreakpoint] = useState(null);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [completionPercentage, setCompletionPercentage] = useState([6, 25]);
+  const [resStore, setResStore] = useState([]);
   const navigate = useNavigate();
 
   const questionPreMap = {
@@ -48,7 +49,7 @@ const Assessment = () => {
     "I am confident that my job/role is not at risk due to AI's potential to replace me at work.",
   ];
   const breakPoints = [
-    [0, "Strongly Disagree  "],
+    [0, "Strongly Disagree"],
     [1, "Disagree"],
     [2, "Neutral"],
     [3, "Agree"],
@@ -60,6 +61,7 @@ const Assessment = () => {
       navigate("/", { replace: true });
     } else {
       setCurrQuestion(currQuestion - 1);
+      setSelectedBreakpoint(resStore[currQuestion-1])
       setCompletionPercentage(questionPreMap[currQuestion]);
     }
   };
@@ -67,7 +69,11 @@ const Assessment = () => {
   const handleBreakpointClick = (breakpoint) => {
     setCompletionPercentage(questionPreMap[currQuestion + 2]);
     setSelectedBreakpoint(breakpoint);
-    setCurrQuestion(currQuestion + 1);
+    setResStore([...resStore, breakpoint])
+    setTimeout(() => {
+      setCurrQuestion(currQuestion + 1);
+      setSelectedBreakpoint(null);
+    }, 1000);
   };
 
   return (
@@ -149,7 +155,7 @@ const Assessment = () => {
                 style={{
                   position: "absolute",
                   border: "5px solid rgb(110, 12, 249)",
-                  width: `${selectedBreakpoint * 24.6}%`,
+                  width: `${selectedBreakpoint * 24}%`,
                   transformOrigin: "top",
                   transition: "width 0.3s ease",
                   borderRadius: "5px",
