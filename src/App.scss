@@ -107,18 +107,18 @@
             left: -6%;
             background: transparent;
             font-size: 24px;
-            color: #00CDA7;
+            color: #00cda7;
           }
 
           .progress {
             height: 100%;
-            background-color: #00CDA7;
+            background-color: #00cda7;
           }
         }
 
         .play-pause-btn:hover {
           .btn {
-            color: #00CDA7;
+            color: #00cda7;
           }
         }
       }
@@ -164,7 +164,7 @@
         }
 
         .get-started:hover {
-          background-color: #00CDA7;
+          background-color: #00cda7;
         }
 
         .time-estimate {
@@ -183,9 +183,8 @@
     background-color: white;
     max-width: 900px;
     width: 1000px;
-    height: 570px;
+    min-height: 550px;
     text-align: center;
-
   }
 
   .progress-bars {
@@ -221,9 +220,11 @@
     }
 
     @media (max-width: 768px) {
-          .progress-bar2, .progress-bar3, .progress-bar4{
-            display: none;
-          }
+      .progress-bar2,
+      .progress-bar3,
+      .progress-bar4 {
+        display: none;
+      }
     }
   }
 
@@ -263,6 +264,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 120px;
+    margin-bottom: 40px;
 
     .pnbtn {
       border: none;
